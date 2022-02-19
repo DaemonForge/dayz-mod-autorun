@@ -21,6 +21,11 @@ modded class PlayerBase extends ManBase
     void SetSchanaAutorunning(bool isRunning)
     {
         m_SchanaAutorunning = isRunning;
+		if (m_SchanaAutorunning){
+			OnSprintStart();
+		} else {
+			OnSprintEnd();
+		}
     }
 
     bool SchanaIsAutorunning()
